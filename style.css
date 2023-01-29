@@ -1,0 +1,273 @@
+
+:root{
+    --primayColor: #009788;
+    --background:#f1f1f1;
+    --textColor: #a6a7aa;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: block;
+    position: relative;
+    color: var(--textColor);
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    max-height: 100vh;
+}
+main{
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-template-rows: auto auto;
+    gap: 5px 7px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 20%;
+    max-width: 78%;
+    overflow: hidden;
+}
+
+.left{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.right-top,.right-bottom, .left{
+    display: block;
+    position: relative;
+    margin-top: 5px;
+    background-color: var(--background);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.right-top p, .right-bottom p, .left p{
+    font-size: 0.5rem;
+    
+}
+.right-top h4, .right-bottom h4, .left h4{
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.right-top h2, .right-bottom h2{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.left > div, .right-top > div, .right-bottom > div{
+    margin-bottom: 12px;
+}
+.img{
+    width: 100%;
+    max-height: 130px;
+    overflow: hidden;
+    position: relative;
+
+}
+.img img{
+    max-width: 100%;
+    height: 100%;
+}
+.img p{
+    position: absolute;
+    color: black;
+    z-index: 1;
+    bottom: 10px;
+    left: 10px;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.information,.language,.skill{
+    padding: 4px 10px;
+}
+.information{
+    width: 100%;
+    position: relative;
+    display: block;
+    line-height: 1.5rem;
+}
+.information{
+    margin-top: 0;
+    padding-top: 0;
+}
+.img{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+[class|= fa]{
+    color: var(--primayColor);
+}
+.skill div, .language div{
+    margin: 5px 0;
+}
+.skill{
+    width: 100%;
+    position: relative;
+    display: block;
+}
+[class|=percent]{
+    background-color: #ffffff;
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+[class|="percent"] p{
+    color: #ffffff;
+    background-color: var(--primayColor);
+    border-radius: 8px;
+    height: 10px;
+}
+.percent-90 p{
+    width: 90%;
+
+}
+.percent-80 p{
+    width: 80%;
+}
+.percent-70 p {
+    width: 70%;
+}
+.percent-50 p {
+    width: 50%;
+}
+.language {
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+
+/* -----Main right top and bottom------ */
+.right-top h2, .right-bottom h2{
+    padding: 10px;
+}
+.right-top >div,.right-bottom>div{
+    padding: 3px 10px;
+}
+.right-top .current{
+    background-color: var(--primayColor);
+    color: #ffffff;
+    padding: 0 3px;
+}
+
+.content{
+    line-height: 1.1rem;
+}
+.content p{
+    color: black;
+}
+.content .time{
+    color: var(--primayColor);
+}
+
+
+/* ------footer------- */
+.footer{
+    display: block;
+    position:fixed;
+    width: 100%;
+    min-height: 10%;
+    background-color: var(--primayColor);
+    color: #ffffff;
+    justify-content: center;
+    text-align: center;
+    bottom: 0;
+    padding : 6px;
+}
+
+.footer .footer-item [class |="fa"]{
+    color: #ffffff;
+}
+.footer p{
+    font-size: 0.8em;
+}
+.footer a{
+    color: #ffffff;
+}
+
+
+/* ------responsive------ */
+
+@media(max-width:720px){
+    body{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    main{
+        max-width: 100%;
+        height: auto;
+        display:block;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px; 
+        background-color: var(--background);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .left, .right-top, .right-bottom{
+        display: block;
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        padding: 5px 12px;
+    }
+    .left,.right-top{
+        margin-bottom: 10px;
+    }
+    .img{
+        width: 100%;
+        min-height: 210px;
+        
+    }
+    .img img{
+        max-width: 100%;
+        height: 100%;
+    }
+    .information p,.skill p,.language p, .right-top p, .right-bottom p{
+        font-size: 0.7rem;
+
+    }
+    [class|=percent]{
+        background-color: #ffffff;
+        width: 100%;
+        height: 15px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    [class|="percent"] p{
+        color: #ffffff;
+        background-color: var(--primayColor);
+        border-radius: 8px;
+        height: 15px;
+    }
+    .left h4,.right-top h4, .right-bottom h4{
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .left .img p{
+        font-size: 17px;
+    }
+    
+    .right-top h2, .right-bottom h2{
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    .right-bottom >div, .right-top> div{
+        margin: 15px 0;
+    }
+    .right-top p, .right-bottom p{
+        padding: 4px;
+    }
+    .footer{
+        display: block;
+        position: relative;
+        min-width: 100%;
+        min-height:80px;
+    }
+    .footer-item{
+        padding: 2px 0;
+    }
+}
